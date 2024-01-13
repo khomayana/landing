@@ -1,0 +1,113 @@
+.header {
+    position: relative;
+    padding: 50px 10px;
+    text-align: center;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__menu {
+        display: none;
+        padding-top: 53px;
+
+        li {
+            padding: 29px 0;
+
+            &:hover {
+                background-color: #CC5520;
+            }
+        }
+
+        a {
+            display: block;
+            color: #0F001A;
+            font-size: 31px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        &--show {
+            display: block;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        display: none;
+        margin-top: 20px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            width: 2px;
+            height: 16px;
+            background-color: #969595;
+            content: '';
+        }
+
+        &::before {
+            transform: rotate(315deg);
+        }
+
+        &::after {
+            transform: rotate(45deg);
+        }
+
+        &:hover {
+
+            &::before,
+            &::after {
+                background-color: #CC5520;
+            }
+        }
+
+        &--show {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 173px 50px 121px;
+
+        &__menu {
+            display: flex;
+            gap: 55px;
+            padding-top: 0;
+
+            li {
+                padding: 0;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            a {
+                font-size: 18px;
+
+                &:hover {
+                    color: #CC5520;
+                }
+            }
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}

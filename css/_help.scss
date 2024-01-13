@@ -1,0 +1,150 @@
+.help {
+    display: grid;
+    grid-template-areas:
+        'title'
+        'card-01'
+        'card-02'
+        'card-03';
+    padding: 0 10px;
+
+    &__title {
+        grid-area: title;
+    }
+
+    &__card {
+        background-color: #fff;
+        position: relative;
+        margin-bottom: 40px;
+        padding: 230px 45px 45px;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px 0px rgba(234, 145, 39, 0.50);
+        z-index: 10;
+
+        &--01 {
+            grid-area: card-01;
+            margin-top: 22px;
+        }
+
+        &--02 {
+            grid-area: card-02;
+        }
+
+        &--03 {
+            grid-area: card-03;
+        }
+
+        &--pic {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--title {
+            padding-bottom: 15px;
+        }
+
+        &--text {
+            padding-bottom: 38px;
+            color: #0F001A;
+            line-height: 1.625;
+            opacity: 0.6;
+        }
+
+        &--reference {
+            font: normal 500 14px/2.142 Roboto;
+            color: #CC5520;
+        }
+
+        &--arrow {
+            position: relative;
+            display: inline-block;
+            width: 10px;
+            border-top: 2px solid #CC5520;
+            transform: translate(15px, -2px);
+
+            &::after {
+                position: absolute;
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid #CC5520;
+                border-right: 2px solid #CC5520;
+                transform: translateY(-59%) rotate(45deg);
+                content: '';
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .help {
+        justify-content: space-between;
+        grid-template-areas:
+            'title card-01'
+            'card-02 card-01'
+            'card-02 card-03'
+            '. card-03';
+        row-gap: 110px;
+        padding: 150px 159px 110px 121px;
+
+
+        &__card {
+            align-self: self-start;
+            max-width: 380px;
+            margin-bottom: 0;
+            padding-top: 249px;
+            transform-style: preserve-3d;
+
+            &::after {
+                position: absolute;
+                width: 153px;
+                height: 153px;
+                z-index: 0;
+                background-image: url(../img/help-dots-bg.png);
+                content: '';
+            }
+
+            &--text {
+                padding-bottom: 50px;
+            }
+
+            &--01 {
+                margin-top: 7px;
+
+                &::after {
+                    top: 0;
+                    right: 0;
+                    transform: translate(50%, -50%) translateZ(-1px);
+                }
+            }
+
+            &--02 {
+                margin: 64px 40px 0 70px;
+
+                &::after {
+                    bottom: 0;
+                    left: 0;
+                    transform: translate(-50%, 50%) translateZ(-1px);
+                }
+            }
+
+            &--03 {
+                &::after {
+                    bottom: 0;
+                    right: 0;
+                    transform: translate(50%, 50%) translateZ(-1px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .help {
+        &__title {
+            padding-right: 50px;
+        }
+    }
+}

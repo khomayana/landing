@@ -1,0 +1,115 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", "Arial", 'Helvetica Neue', Helvetica, sans-serif;
+    font: normal 400 16px/1.5 Roboto;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 768px;
+        background: linear-gradient(180deg, rgba(255, 79, 0, 0.2) -17.33%, rgba(255, 107, 0, 0.00) 75.91%), #FFF;
+        z-index: -1;
+        content: "";
+    }
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font: normal 400 36px/1.33 Roboto;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font: normal 400 26px/1.33 Roboto;
+    letter-spacing: 1px;
+}
+
+h4 {
+    color: #0F001A;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+h5 {
+    line-height: 1.62;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1230px;
+    min-width: 375px;
+    margin: 0 auto;
+}
+
+.blur-content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.80);
+    filter: blur(6px);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .blur-content {
+        background: none;
+        filter: none;
+    }
+}
+
+@media (min-width: 1150px) {
+    h2 {
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,79 @@
+.download {
+    display: grid;
+    grid-template-areas:
+        'pic'
+        'title'
+        'text'
+        'btn';
+    padding: 0 10px 50px;
+    justify-items: center;
+
+    &__pic {
+        grid-area: pic;
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        grid-area: title;
+        padding-bottom: 13px;
+    }
+
+    &__text {
+        grid-area: text;
+        padding-bottom: 24px;
+        opacity: 0.5;
+    }
+
+    &__btn {
+        display: flex;
+        gap: 20px;
+        grid-area: btn;
+
+        &--google {
+            background-image: url(../img/down-google-play-m.svg);
+        }
+
+        &--apple {
+            background-image: url(../img/down-app-store-m.svg);
+        }
+
+        &>* {
+            background-color: #000;
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+    .download {
+        grid: auto 128px auto / 1.2fr 0.8fr;
+        grid-template-areas:
+            'pic title'
+            'pic text'
+            'pic btn';
+        padding: 0 159px 123px 43px;
+        column-gap: 30px;
+
+        &__pic {
+            padding-bottom: 0;
+        }
+
+        &__title {
+            align-self: self-end;
+        }
+
+        &__text {
+            padding-bottom: 0;
+        }
+
+        &__btn {
+            &--google {
+                background-image: url(../img/down-google-play.svg);
+            }
+
+            &--apple {
+                background-image: url(../img/down-app-store.svg);
+            }
+        }
+    }
+}

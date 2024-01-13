@@ -1,0 +1,101 @@
+.fox-say {
+    padding: 50px 0 75px;
+    color: #0F001A;
+
+    &__title {
+        padding-bottom: 100px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        position: relative;
+        background: linear-gradient(to bottom, #FFE9D0 45%, transparent 45%);
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        background-image: url(../img/carousel-quote-m.png);
+        background-repeat: no-repeat;
+        background-position: left 5% bottom 40%;
+
+        &--pic {
+            width: 67%;
+            transform: translateY(-35%);
+            align-self: center;
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .fox-say {
+        padding: 140px 0 155px;
+
+        &__title {
+            padding: 0 180px 100px 97px;
+            text-align: right;
+        }
+
+        &__content {
+            position: relative;
+            flex-direction: row;
+            background-image: none;
+            align-items: stretch;
+            gap: 60px;
+            padding: 0 159px 0 97px;
+
+            &--pic {
+                width: 47%;
+                padding: 0 50px 0 0;
+                transform: translateY(-32%);
+            }
+        }
+
+        &__wrapper {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(to right, #FFE9D0 46%, transparent 46%, transparent 100%);
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 45%;
+                height: 100%;
+                width: 20px;
+                background: #FFE9D0;
+                border-radius: 0 6px 6px 0;
+                content: "";
+            }
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 153px;
+                height: 153px;
+                z-index: 2;
+                transform: translateY(50%);
+                background-image: url(../img/help-dots-bg.png);
+                content: '';
+            }
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .fox-say {
+
+        &__content {
+            gap: 110px;
+        }
+
+        &__wrapper {
+            position: relative;
+            height: 400px;
+        }
+    }
+
+}

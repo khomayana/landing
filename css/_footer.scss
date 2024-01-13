@@ -1,0 +1,147 @@
+.footer {
+    color: #fff;
+    background-color: #cc5520;
+
+    &__top {
+        padding: 39px 10px 90px;
+        text-align: center;
+    }
+
+    &__logo {
+        display: block;
+        padding-bottom: 50px;
+    }
+
+    &__menu {
+        padding-bottom: 30px;
+
+        &--title {
+            display: inline-block;
+            margin-bottom: 28px;
+            font-size: 28px;
+            border-bottom: 2px solid #fff;
+        }
+
+        li {
+            a {
+                color: #fff;
+                font-size: 18px;
+            }
+
+            &:not(:last-child) {
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+    &__subscribe {
+        &--text {
+            padding-bottom: 10px;
+            font-size: 18px;
+        }
+
+        &--btn {
+            width: 100%;
+            padding: 16px 140px;
+            color: #cc5520;
+            background-color: #fff;
+            border-radius: 3px;
+            border: none;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        input {
+            width: 100%;
+            margin-bottom: 11px;
+            padding: 17px 0 17px 13px;
+            background-color: #fff;
+            border: none;
+            border-radius: 3px;
+            outline: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        border-top: 1px solid #fff;
+
+        &--text {
+            font-size: 10.41px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        &__top {
+            display: flex;
+            text-align: start;
+            justify-content: space-between;
+            padding: 50px 38px 40px 0;
+        }
+
+        &__logo {
+            padding: 0 50px 0 0;
+        }
+
+        &__menu {
+            padding: 5px 0 0;
+
+            &--title {
+                font-size: 18px;
+                margin-bottom: 13px;
+            }
+
+            li {
+                a {
+                    font-size: 14px;
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+
+        &__subscribe {
+            max-width: 390px;
+            padding: 5px 0 0;
+
+            &--text {
+                padding-bottom: 20px;
+            }
+
+            &--btn {
+                width: auto;
+                padding: 17px 23px;
+            }
+
+            input {
+                max-width: 268px;
+            }
+        }
+
+        &__wrapper {
+            padding: 15px 38px 15px 0;
+            justify-content: space-between;
+        }
+    }
+}
